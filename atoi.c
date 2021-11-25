@@ -2,19 +2,21 @@ int	ft_atoi(const char *str)
 {
 	int r;
 	int s;
-	
+	int i;
+
+	i = 0;
 	r = 0;
 	s = 1;
-	 if (*str == '-' || *str == '+')
+	 if (str[i] == '-' || str[i] == '+')
 	 {
-		if (*str == '-')
+		if (str[i] == '-')
 			s *= -1;
-		str++;
+		i++;
 	 }
-	while (*str)
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		r = r * 10 + (*str - 48);
-		str++;
+		r = r * 10 + (str[i] - 48);
+		i++;
 	}
 	return (r * s);
 }
@@ -22,6 +24,7 @@ int	ft_atoi(const char *str)
 #include <stdlib.h>
 int main()
 {
+	char str[9] = "+12s478";
 	printf("%d\n", atoi("+12s478"));
 	printf("%d", ft_atoi("+12s478"));
 }

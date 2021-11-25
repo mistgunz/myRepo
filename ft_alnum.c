@@ -1,5 +1,5 @@
 
-int ft_isalnum(int an)
+int	ft_isalnum(int an)
 {
 	if (!((an >= 48 && an <= 57) ||
 			(an >= 65 && an <= 90) ||
@@ -16,4 +16,5 @@ int main()
 	printf("%d", a);
 	printf("%d", ft_isalnum(c));
 	printf("%d", isalnum(c));
+printf("\n space :%d ,tab : %d ",' ','	');
 }
