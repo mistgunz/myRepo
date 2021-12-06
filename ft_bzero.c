@@ -7,6 +7,8 @@ void ft_bzero (void *s, unsigned int n)
         ss[i] = 0 ; 
         i++ ;  
     }
+    
+
 }
 
 #include <string.h>
@@ -15,8 +17,8 @@ int main()
 {
     char s1[6]="abcdef";
     char s2[6] = "123456";
-    bzero(s1,3);
-    ft_bzero(s2,3);
-    printf("original : %c \n",s1[3]);
-    printf("ft : %c \n", s2[3]);
+    bzero(s1,0);
+    ft_bzero(s2,0);
+    printf("original : %s \n",(char*)s1);
+    printf("ft : %s \n", (char*)s2);
 }
